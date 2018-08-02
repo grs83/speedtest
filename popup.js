@@ -1,3 +1,7 @@
+$.getJSON('http://api.jambase.com/events?zipCode=91206&api_key=zwz9yrhmm2wksh8a7awqh83b', function(data){
+  console.log(data);
+})
+
 const oArgs = {
   app_key: "vC6JjzFkLQqRMX39",
   location: "",
