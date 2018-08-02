@@ -9,7 +9,16 @@
 .body {
   width: 384px;
   height: 600px;
-  background-color: rgba(126, 136, 157, 0.2);
+  background-image: url("./images/concert.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: fixed;
+  width: 384px;
+  height: 600px;
+  background-color: rgba(126, 136, 157, 0.6);
 }
 
 .header-wrapper {
@@ -25,12 +34,15 @@
 }
 
 .header-break {
-  height: 40px;
+  height: 80px;
 }
 
 .input-wrapper {
   height: 40px;
+  width: 384px;
   border-bottom: 1px solid #f4f4f4;
+  position: fixed;
+  top: 40px;
 }
 
 .input {
@@ -56,8 +68,12 @@
   cursor: pointer;
 }
 
-.results-wrapper {
+#results-wrapper {
   overflow: scroll;
+  height: 520px;
+  position: fixed;
+  top: 80px;
+  width: 384px;
 }
 
 .row {

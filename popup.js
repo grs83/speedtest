@@ -16,20 +16,20 @@ const oArgs = {
 
 EVDB.API.call("/events/search", oArgs, response => {
   // console.log(response);
-  
+
   buildEventInfo(response);
 
   // console.log(response.events.event[0].title);
 })
 
 function buildEventInfo(data){
-  const eventInfoBoxWrapper = document.querySelector(".results-wrapper");
+  const eventInfoBoxWrapper = document.querySelector("#results-wrapper");
   // iterate through the object and add appropriate info
   data.events.event.forEach(info => {
     // resultInfo div
     const resultInfo = document.createElement("div");
     resultInfo.setAttribute("class", "resultInfo");
-    // resultImg 
+    // resultImg
     const resultImg = document.createElement("img");
     resultImg.setAttribute("class", "resultImg");
     // sideInfoBox
@@ -68,4 +68,3 @@ function buildEventInfo(data){
 // .then((res) => res.json())
 // .then(data => console.log(data))
 // .catch((err) => console.log(err))
-
