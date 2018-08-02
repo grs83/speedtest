@@ -1,0 +1,12 @@
+{
+  "manifest_version": 1,
+  "name": "Speed Test",
+  "description": "Tests speed",
+  "version": "1.0.0",
+  "icons": {"128": "./images/speed.png"},
+  "browser_action":{
+    "default_icon": "speed.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
