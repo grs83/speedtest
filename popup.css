@@ -38,8 +38,9 @@
 }
 
 .input-wrapper {
-  height: 40px;
-  width: 384px;
+  height: 50px;
+  width: 364px;
+  margin-left: 10px;
   border-bottom: 1px solid #f4f4f4;
   position: fixed;
   top: 40px;
@@ -62,7 +63,8 @@
   box-shadow: 0 2px 3px black;
 }
 
-.submit-button:hover {
+.submit-button:hover,
+.cursor:hover {
   position: relative;
   top: -1px;
   cursor: pointer;
@@ -76,6 +78,24 @@
   width: 384px;
 }
 
+.resultInfo {
+  margin: 20px 0;
+  border: 1px solid #3f4c6b;
+  width: 364px;
+  margin-left: 10px;
+  background-color: rgba(250, 250, 250, 0.4);
+}
+
+.sideInfoBox {
+  margin: 10px 0;
+}
+
+.resultName {
+  font-size: 1.25em;
+  font-weight: 200;
+  margin: 5px;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -87,4 +107,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* .cursor:hover {
+  cursor: pointer;
+  position: relative;
+  top: -1px;
+} */
+
+a {
+  text-decoration: none;
+  color: #182544;
 }
