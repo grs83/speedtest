@@ -1,5 +1,3 @@
-
-
 const oArgs = {
   app_key: "vC6JjzFkLQqRMX39",
   location: "",
@@ -17,8 +15,49 @@ const oArgs = {
 }
 
 EVDB.API.call("/events/search", oArgs, response => {
-  console.log(response);
+  // console.log(response);
+  
+  buildEventInfo(response);
+
+  // console.log(response.events.event[0].title);
 })
+
+function buildEventInfo(data){
+  const eventInfoBoxWrapper = document.querySelector(".results-wrapper");
+  // iterate through the object and add appropriate info
+  data.events.event.forEach(info => {
+    // resultInfo div
+    const resultInfo = document.createElement("div");
+    resultInfo.setAttribute("class", "resultInfo");
+    // resultImg 
+    const resultImg = document.createElement("img");
+    resultImg.setAttribute("class", "resultImg");
+    // sideInfoBox
+    const sideInfoBox = document.createElement("div");
+    sideInfoBox.setAttribute("class", "sideInfoBox");
+    // resultLocation
+    const resultLocation = document.createElement("p");
+    resultLocation.setAttribute("class", "resultLocation column");
+    // resultTitle
+    const resultTitle = document.createElement("p");
+    resultTitle.setAttribute("class", "resultTitle");
+    resultTitle.innerHTML = info.title;
+
+    resultInfo.appendChild(resultImg);
+    resultInfo.appendChild(sideInfoBox);
+    sideInfoBox.appendChild(resultLocation);
+    sideInfoBox.appendChild(resultTitle);
+
+    eventInfoBoxWrapper.appendChild(resultInfo);
+  })
+}
+
+// fetch data
+
+// div
+  // title
+  // description
+
 // fetch("http://api.eventful.com/js/api/events/search", {
 //  method: "POST",
 //  body: JSON.stringify(oArgs),
